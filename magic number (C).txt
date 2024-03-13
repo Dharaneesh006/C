@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+   int a,sum,rev,s=0,re;
+   scanf("%d",&a);
+   while(a>0){
+      sum=a%10;
+      rev+=sum;
+      a/=10;
+   }
+   printf("%d ",rev );
+   while(rev>0){
+       re=rev%10;
+       s=s*10+re;
+       rev/=10;
+   }
+   
+   printf("%d ",s);
+   if(s*rev==a){
+       printf("magic no");
+   }
+   else{
+       printf("not magic");
+   }
+}
